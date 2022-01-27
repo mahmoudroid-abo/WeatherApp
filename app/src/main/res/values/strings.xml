@@ -7,5 +7,7 @@
     <string name="thursday">Thursday</string>
     <string name="friday">Friday</string>
     <string name="saturday">Saturday</string>
+    <string name="location_text">Cairo</string>
+    <string name="_3_day_forecast">3-day Forecast</string>
 
 </resources>
