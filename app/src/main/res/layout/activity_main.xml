@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tvCityName"
+        android:id="@+id/textCityName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -20,17 +20,28 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/tvTemperature"
+        android:id="@+id/textToday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="@string/today"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textTemperature"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="25dp"
         android:gravity="center"
         android:text="@string/_11"
         android:textColor="@color/white"
-        android:textSize="70sp" />
+        android:textSize="60sp" />
 
     <TextView
-        android:id="@+id/tvDescription"
+        android:id="@+id/textDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -39,7 +50,7 @@
         android:textSize="25sp" />
 
     <TextView
-        android:id="@+id/tvWind"
+        android:id="@+id/textWind"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -61,12 +72,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
                 android:padding="8dp"
                 android:text="@string/_3_day_forecast"
                 android:textColor="@color/white"
                 android:textSize="25sp"
-                android:textStyle="bold"
-                android:layout_marginTop="30dp"/>
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -79,13 +90,14 @@
 
 
             <TextView
+                android:id="@+id/textDayOneForecast"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:maxLines="1"
                 android:text="@string/thursday"
                 android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvForecast1"
@@ -108,12 +120,13 @@
             android:padding="8dp">
 
             <TextView
+                android:id="@+id/textDayTwoForecast"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="@string/friday"
                 android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvForecast2"
@@ -136,12 +149,13 @@
             android:padding="8dp">
 
             <TextView
+                android:id="@+id/textDayThreeForecast"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="@string/saturday"
                 android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvForecast3"

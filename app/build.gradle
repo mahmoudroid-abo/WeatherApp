@@ -40,12 +40,13 @@ android {
 dependencies {
 
     def retrofit_version = "2.9.0"
-    def okhttp_version = "4.9.0"
-    def coroutines_version = "1.4.2"
+    def okhttp_version = "5.0.0-alpha.2"
+    def coroutines_version = "1.5.2"
     def hilt_version = "2.40.5"
-    def lifecycle_version = "2.3.1"
-    def ktx_version = "1.2.2"
+    def lifecycle_version = "2.4.1"
+    def ktx_version = "1.4.0"
     def hilt_compiler_version = "1.0.0-beta01"
+    def card_view_version = "1.0.0"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
@@ -56,6 +57,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
 
+    // CardView
+    implementation("androidx.cardview:cardview:$card_view_version")
 
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
