@@ -32,30 +32,6 @@ class MainActivity : AppCompatActivity() {
                 textWind.text = weather.wind
                 textToday.text = convertDay(getCurrentDay())
 
-//                when (getCurrentDay()) {
-//                    1 -> {
-//                        textToday.text = "Sunday"
-//                    }
-//                    2 -> {
-//                        textToday.text = "Monday"
-//                    }
-//                    3 -> {
-//                        textToday.text = "Tuesday"
-//                    }
-//                    4 -> {
-//                        textToday.text = "Wednesday"
-//                    }
-//                    5 -> {
-//                        textToday.text = "Thursday"
-//                    }
-//                    6 -> {
-//                        textToday.text = "Friday"
-//                    }
-//                    7 -> {
-//                        textToday.text = "Saturday"
-//                    }
-//                }
-
                 val dayOneForecast = weather.forecast[0]
                 val dayTwoForecast = weather.forecast[1]
                 val dayThreeForecast = weather.forecast[2]
@@ -68,12 +44,12 @@ class MainActivity : AppCompatActivity() {
                 textDayTwoForecast.text = convertDay(calculateDayTwoForecast)
                 textDayThreeForecast.text = convertDay(calculateDayThreeForecast)
 
-                tvForecast1.text = "${dayOneForecast.temperature} " +
-                        "/ ${dayOneForecast.wind}"
-                tvForecast2.text = "${dayTwoForecast.temperature} " +
-                        "/ ${dayTwoForecast.wind}"
-                tvForecast3.text = "${dayThreeForecast.temperature} " +
-                        "/ ${dayThreeForecast.wind}"
+                tvForecast1.text = "${dayOneForecast.temperature}\n " +
+                        "\n ${dayOneForecast.wind}"
+                tvForecast2.text = "${"+" + dayTwoForecast.temperature}\n " +
+                        "\n ${dayTwoForecast.wind}"
+                tvForecast3.text = "${dayThreeForecast.temperature}\n " +
+                        "\n ${dayThreeForecast.wind}"
             }
         })
     }
@@ -96,7 +72,7 @@ class MainActivity : AppCompatActivity() {
                 return "Tuesday"
             }
             4 -> {
-                return "Wednesday"
+                return "Wednesd"
             }
             5 -> {
                 return "Thursday"

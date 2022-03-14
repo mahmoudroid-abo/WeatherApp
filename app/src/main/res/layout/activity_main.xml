@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,27 +9,58 @@
     android:padding="8dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textCityName"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:gravity="center"
-        android:text="@string/cairo"
-        android:textColor="@color/white"
-        android:textSize="40sp"
-        android:textStyle="bold" />
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textToday"
-        android:layout_width="match_parent"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/location_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:src="@drawable/icon_location" />
+
+        <TextView
+            android:id="@+id/textCityName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/cairo"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:gravity="center"
-        android:text="@string/today"
-        android:textColor="@color/white"
-        android:textSize="40sp"
-        android:textStyle="bold" />
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/today_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:src="@drawable/icon_today" />
+
+        <TextView
+            android:id="@+id/textToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/today"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textTemperature"
@@ -61,113 +93,243 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:padding="8dp"
-                android:text="@string/_3_day_forecast"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="30dp"
-            android:orientation="horizontal"
-            android:padding="8dp">
-
-
-            <TextView
-                android:id="@+id/textDayOneForecast"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:maxLines="1"
-                android:text="@string/thursday"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/tvForecast1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="20dp"
-                android:layout_weight="1"
-                android:gravity="end"
-                android:text="@string/_20km_h"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-
-        </LinearLayout>
+            android:padding="8dp"
+            android:text="@string/_3_day_forecast"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:orientation="horizontal"
-            android:padding="8dp">
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textDayTwoForecast"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="@string/friday"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/tvForecast2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="20dp"
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:gravity="end"
-                android:text="@string/_20km_h"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
+                app:cardBackgroundColor="@color/colorCardView"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="20dp"
+                app:cardPreventCornerOverlap="false">
+
+                <!--                app:strokeColor="@color/white"-->
+                <!--                app:strokeWidth="3dp"-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+
+                    <TextView
+                        android:id="@+id/textDayOneForecast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:text="@string/thursday"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tvForecast1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:text="@string/_20km_h"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/colorCardView"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="20dp"
+                app:cardPreventCornerOverlap="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+
+                    <TextView
+                        android:id="@+id/textDayTwoForecast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:text="@string/friday"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tvForecast2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:text="@string/_20km_h"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/colorCardView"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="20dp"
+                app:cardPreventCornerOverlap="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+
+                    <TextView
+                        android:id="@+id/textDayThreeForecast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/saturday"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tvForecast3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:text="@string/_20km_h"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
 
         </LinearLayout>
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:layout_marginTop="30dp"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            android:padding="8dp">-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:orientation="horizontal"
-            android:padding="8dp">
 
-            <TextView
-                android:id="@+id/textDayThreeForecast"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="@string/saturday"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
+        <!--            <TextView-->
+        <!--                android:id="@+id/textDayOneForecast"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_weight="2"-->
+        <!--                android:maxLines="1"-->
+        <!--                android:text="@string/thursday"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textSize="18sp" />-->
 
-            <TextView
-                android:id="@+id/tvForecast3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="20dp"
-                android:layout_weight="1"
-                android:gravity="end"
-                android:text="@string/_20km_h"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
 
-        </LinearLayout>
+        <!--            <TextView-->
+        <!--                android:id="@+id/tvForecast1"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginEnd="20dp"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:gravity="end"-->
+        <!--                android:text="@string/_20km_h"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textSize="20sp" />-->
+
+        <!--        </LinearLayout>-->
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            android:padding="8dp">-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/textDayTwoForecast"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_weight="2"-->
+        <!--                android:text="@string/friday"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textSize="18sp" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/tvForecast2"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginEnd="20dp"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:gravity="end"-->
+        <!--                android:text="@string/_20km_h"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textSize="20sp" />-->
+
+        <!--        </LinearLayout>-->
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            android:padding="8dp">-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/textDayThreeForecast"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_weight="2"-->
+        <!--                android:text="@string/saturday"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textSize="18sp" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/tvForecast3"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginEnd="20dp"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:gravity="end"-->
+        <!--                android:text="@string/_20km_h"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textSize="20sp" />-->
+
+        <!--        </LinearLayout>-->
     </LinearLayout>
 </LinearLayout>
