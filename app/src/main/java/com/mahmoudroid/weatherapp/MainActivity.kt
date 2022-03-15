@@ -1,16 +1,14 @@
 package com.mahmoudroid.weatherapp
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.mahmoudroid.weatherapp.databinding.ActivityMainBinding
+import com.mahmoudroid.weatherapp.utils.Utils.convertDay
+import com.mahmoudroid.weatherapp.utils.Utils.getCurrentDay
 import com.mahmoudroid.weatherapp.viewmodel.WeatherViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import java.util.*
-
-private const val TAG = "####"
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -31,7 +29,6 @@ class MainActivity : AppCompatActivity() {
                 textDescription.text = weather.description
                 textWind.text = weather.wind
                 textToday.text = convertDay(getCurrentDay())
-
                 val dayOneForecast = weather.forecast[0]
                 val dayTwoForecast = weather.forecast[1]
                 val dayThreeForecast = weather.forecast[2]
@@ -52,38 +49,5 @@ class MainActivity : AppCompatActivity() {
                         "\n ${dayThreeForecast.wind}"
             }
         })
-    }
-
-
-    fun getCurrentDay(): Int {
-        val value: Calendar = Calendar.getInstance()
-        return value.get(Calendar.DAY_OF_WEEK)
-    }
-
-    fun convertDay(dayNumber: Int): String {
-        when (dayNumber) {
-            1 -> {
-                return "Sunday"
-            }
-            2 -> {
-                return "Monday"
-            }
-            3 -> {
-                return "Tuesday"
-            }
-            4 -> {
-                return "Wednesd"
-            }
-            5 -> {
-                return "Thursday"
-            }
-            6 -> {
-                return "Friday"
-            }
-            7 -> {
-                return "Saturday"
-            }
-        }
-        return true.toString()
     }
 }

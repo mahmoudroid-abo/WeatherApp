@@ -1,7 +1,7 @@
 package com.mahmoudroid.weatherapp.di
 
 import com.mahmoudroid.weatherapp.network.WeatherApi
-import com.mahmoudroid.weatherapp.utils.Constants
+import com.mahmoudroid.weatherapp.utils.Utils
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,7 +16,7 @@ import javax.inject.Singleton
 object AppModule {
 
     @Provides
-    fun providesBaseUrl() = Constants.BASE_URL
+    fun providesBaseUrl() = Utils.BASE_URL
 
     @Provides
     @Singleton

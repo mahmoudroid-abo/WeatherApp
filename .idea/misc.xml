@@ -5,7 +5,9 @@
       <map>
         <entry key="..\:/Users/maboe/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/background.xml" value="0.18981481481481483" />
         <entry key="..\:/Users/maboe/AndroidStudioProjects/WeatherApp/app/src/main/res/drawable/icon_location.xml" value="0.1715" />
-        <entry key="..\:/Users/maboe/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/maboe/AndroidStudioProjects/WeatherApp/app/src/main/res/font/font.xml" value="0.234375" />
+        <entry key="..\:/Users/maboe/AndroidStudioProjects/WeatherApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/maboe/AndroidStudioProjects/WeatherApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.168" />
       </map>
     </option>
   </component>
