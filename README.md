@@ -1,6 +1,5 @@
 # WeatherApp
-Weather App
-This Project consumes The https://goweather.herokuapp.com/ API to get and Display Weather Temperature, wind, 3 Day-forecast.
+consumes The https://goweather.herokuapp.com/ API to get and Display Weather Temperature, Wind Gusts, 3 Day-forecast.
  
  
  ## Features and Libraries:
