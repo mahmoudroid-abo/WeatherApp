@@ -6,6 +6,7 @@ Simple Weather App Consumes The https://goweather.herokuapp.com/ API to get and 
  
    - Kotlin.<br/>
    - MVVM architectural pattern.<br/>
+   - kotlin Coroutines.<br/>
    - LiveData .<br/>
    - View Model .<br/>
    - View Binding.<br/>
